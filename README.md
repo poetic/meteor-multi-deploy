@@ -60,15 +60,21 @@ An example of deploy.json
 
 ## ios
 
+### parameters
+
 ## android
+- projectName
+- server
+- (OPTIONAL) mobileSettingsFilePath
 
 ### parameters
 - platformName
 - projectName
 - server
-- mobileSettingsFilePath
 - storepass
 - keystoreFilePath
+- (OPTIONAL) apkOutputPath (DEFAULT: .meteor-builds/${projectName}.apk)
+- (OPTIONAL) mobileSettingsFilePath
 
 ### extra steps
 Publish your apk file at https://play.google.com/apps/publish
