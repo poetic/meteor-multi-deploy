@@ -24,6 +24,11 @@ An example of deploy.json
 ```
 
 # Platforms
+
 ## modulus
+- "platformName": "modulus"
+- "projectName": "modulus-project-name"
+- (OPTIONAL)"settingsFilePath": "settings.production.json"
+
 ## ios
 ## android
