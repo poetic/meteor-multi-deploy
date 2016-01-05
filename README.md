@@ -1,6 +1,9 @@
 # The Goal
 Automate the deployment of a meteor project to multiple platforms.
 
+# Note
+This is package is only tested on Mac.
+
 # Get Started
 ```
 npm install -g meteor-multi-deploy
@@ -47,6 +50,7 @@ An example of deploy.json
 # Platforms
 
 ## modulus
+### parameters
 - platformName
 - projectName
 - (OPTIONAL) settingsFilePath
@@ -54,9 +58,12 @@ An example of deploy.json
 ## ios
 
 ## android
+### parameters
 - platformName
 - projectName
 - server
 - mobileSettingsFilePath
 - storepass
 - keystoreFilePath
+### extra steps
+Publish your apk file at https://play.google.com/apps/publish
