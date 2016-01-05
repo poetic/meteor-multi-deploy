@@ -12,7 +12,7 @@ An example of deploy.json
     {
       "platformName":     "modulus",
       "projectName":      "modulus-project-name",
-      "settingsFilePath": "settings.production.json" // optional
+      "settingsFilePath": "settings.production.json"
     }
   ]
 }
