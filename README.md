@@ -24,6 +24,14 @@ An example of deploy.json
       "projectName":      "my-staging-project",
       "settingsFilePath": "settings.stating.json",
       "ignore": true
+    },
+    {
+      "platformName":           "android",
+      "projectName":            "my-project",
+      "server":                 "my.production.server",
+      "storepass":              "storepass",
+      "mobileSettingsFilePath": "settings-production.json",
+      "keystoreFilePath":       ".keystore"
     }
   ]
 }
@@ -39,9 +47,16 @@ An example of deploy.json
 # Platforms
 
 ## modulus
-- "platformName": "modulus"
-- "projectName": "modulus-project-name"
-- (OPTIONAL)"settingsFilePath": "settings.production.json"
+- platformName
+- projectName
+- (OPTIONAL) settingsFilePath
 
 ## ios
+
 ## android
+- platformName
+- projectName
+- server
+- mobileSettingsFilePath
+- storepass
+- keystoreFilePath
