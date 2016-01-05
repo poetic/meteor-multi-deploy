@@ -8,11 +8,11 @@ you can use ***meteor-multi-deploy(mmd)*** to deploy to multiple platforms.
 An example of deploy.json
 ```json
 {
-  platforms: [
+  "platforms": [
     {
-      platform: 'modulus',
-      settings: 'settings.production.json',
-      name: 'modulus-project-name',
+      "platform": "modulus",
+      "settings": "settings.production.json",
+      "name": "modulus-project-name",
     }
   ]
 }
