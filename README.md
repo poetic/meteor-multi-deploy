@@ -34,6 +34,7 @@ An example of deploy.json
       "server":                 "my.production.server",
       "storepass":              "storepass",
       "mobileSettingsFilePath": "settings-production.json",
+      "apkOutputPath":          "~/Downloads/my-project.apk",
       "keystoreFilePath":       ".keystore"
     }
   ]
@@ -42,6 +43,7 @@ An example of deploy.json
 
 # deploy.json
 - platforms
+
   platforms is an array of objects
   - platformName
   - (OPTIONAL) ignore
@@ -50,6 +52,7 @@ An example of deploy.json
 # Platforms
 
 ## modulus
+
 ### parameters
 - platformName
 - projectName
@@ -58,6 +61,7 @@ An example of deploy.json
 ## ios
 
 ## android
+
 ### parameters
 - platformName
 - projectName
@@ -65,5 +69,6 @@ An example of deploy.json
 - mobileSettingsFilePath
 - storepass
 - keystoreFilePath
+
 ### extra steps
 Publish your apk file at https://play.google.com/apps/publish
