@@ -16,12 +16,25 @@ An example of deploy.json
   "platforms": [
     {
       "platformName":     "modulus",
-      "projectName":      "modulus-project-name",
+      "projectName":      "my-production-project",
       "settingsFilePath": "settings.production.json"
+    },
+    {
+      "platformName":     "modulus",
+      "projectName":      "my-staging-project",
+      "settingsFilePath": "settings.stating.json",
+      "ignore": true
     }
   ]
 }
 ```
+
+# deploy.json
+- platforms
+  platforms is an array of objects
+  - platformName
+  - (OPTIONAL) ignore
+    You can ignore the current platform when trying to deploy
 
 # Platforms
 
