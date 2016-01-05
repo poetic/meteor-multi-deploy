@@ -1,0 +1,35 @@
+{
+  "name": "meteor-multi-deploy",
+  "version": "0.0.1",
+  "description": "Automate the deployment of a meteor project to multiple platforms. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "meteor-multi-deploy": "bin/meteor-multi-deploy.js"
+  },
+  "dependencies": {
+    "cli": "^0.11.1",
+    "shelljs": "^0.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poetic/meteor-multi-deploy.git"
+  },
+  "keywords": [
+    "meteor",
+    "modulus",
+    "ios",
+    "android",
+    "deployment",
+    "cli",
+    "commandline-tool"
+  ],
+  "author": "Chun-Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poetic/meteor-multi-deploy/issues"
+  },
+  "homepage": "https://github.com/poetic/meteor-multi-deploy"
+}

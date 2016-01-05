@@ -10,9 +10,9 @@ An example of deploy.json
 {
   "platforms": [
     {
-      "platform": "modulus",
-      "settings": "settings.production.json",
-      "name": "modulus-project-name",
+      "platformName":     "modulus",
+      "projectName":      "modulus-project-name",
+      "settingsFilePath": "settings.production.json" // optional
     }
   ]
 }
