@@ -48,12 +48,13 @@ An example of meteor-multi-deploy.json
 # meteor-multi-deploy.json
 - platforms
 
-  platforms is an array of objects
+  platforms is an array of objects. Common params are listed bellow.
+  Platform specific params are listed at [Platforms](#platforms).
   - platformName
   - (OPTIONAL) ignore
     (You can ignore the current platform when trying to deploy)
 
-# Platforms
+# Platforms<a name="platforms"></a>
 
 ## modulus
 
