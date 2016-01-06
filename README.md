@@ -67,7 +67,7 @@ An example of meteor-multi-deploy.json
 ### parameters
 - platformName
 - projectName
-  used to open your XXX.xcodeproj folder
+  (used to open your XXX.xcodeproj folder)
 - server
 - (OPTIONAL) settingsFilePath
 
