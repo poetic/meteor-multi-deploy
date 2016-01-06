@@ -34,7 +34,7 @@ var platformName = process.argv[2]
 
 if (platformName) {
   platforms = platforms.filter(function (platform) {
-    return platform.platformName = platformName
+    return platform.platformName === platformName
   })
 }
 
