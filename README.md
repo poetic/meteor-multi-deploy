@@ -10,10 +10,14 @@ npm install -g meteor-multi-deploy
 alias mmd="meteor-multi-deploy"
 ```
 
-After creating a deploy.json under your meteor directory,
+After creating a meteor-multi-deploy.json under your meteor directory,
 you can use ***meteor-multi-deploy(mmd)*** to deploy to multiple platforms.
+```
+mmd # deploy to all platforms specified in the json file
+mmd android # only deploy to android
+```
 
-An example of deploy.json
+An example of meteor-multi-deploy.json
 ```json
 {
   "platforms": [
@@ -41,7 +45,7 @@ An example of deploy.json
 }
 ```
 
-# deploy.json
+# meteor-multi-deploy.json
 - platforms
 
   platforms is an array of objects
@@ -78,3 +82,8 @@ An example of deploy.json
 
 ### extra steps
 Publish your apk file at https://play.google.com/apps/publish
+
+# TODO
+- android build tool should not be hard coded
+- accept params to specify which platforms to build
+- use gulp or other build tools

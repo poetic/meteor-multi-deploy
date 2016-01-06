@@ -2,22 +2,24 @@
 var fs    = require('fs')
 var cli   = require('cli')
 
-// check if deploy.json exist
+var mmdFileName = 'meteor-multi-deploy.json'
+
+// check if json exist
 var meteorDir      = process.cwd()
-var deployFilePath = meteorDir + '/deploy.json'
+var deployFilePath = meteorDir + '/' + mmdFileName
 
 try {
   fs.accessSync(deployFilePath, fs.F_OK)
 } catch (e) {
-  cli.error('deploy.json is not found under current directory.')
+  cli.error(mmdFileName + ' is not found under current directory.')
   process.exit(1)
 }
 
-// parse deploy.json
+// parse json
 try {
   var deployDescription = JSON.parse(fs.readFileSync(deployFilePath))
 } catch (e) {
-  cli.error('deploy.json is not a valid json file:')
+  cli.error(mmdFileName + ' is not a valid json file:')
   cli.error(e)
   process.exit(e)
 }
@@ -25,4 +27,12 @@ try {
 // deploy to all platforms
 var deploy = require('../lib/deploy.js')
 
-deployDescription.platforms.forEach(deploy)
+// enable user to specify a platform name when running mmd
+var platform = process.argv[2]
+
+if (platform) {
+  platform.ignore = false
+  deploy(platform)
+} else {
+  deployDescription.platforms.forEach(deploy)
+}
