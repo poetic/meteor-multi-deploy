@@ -1,6 +1,6 @@
 {
   "name": "meteor-multi-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automate the deployment of a meteor project to multiple platforms. ",
   "main": "index.js",
   "scripts": {
