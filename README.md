@@ -51,7 +51,7 @@ An example of meteor-multi-deploy.json
   platforms is an array of objects
   - platformName
   - (OPTIONAL) ignore
-    You can ignore the current platform when trying to deploy
+    (You can ignore the current platform when trying to deploy)
 
 # Platforms
 
