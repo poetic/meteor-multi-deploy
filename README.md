@@ -59,14 +59,12 @@ An example of meteor-multi-deploy.json
 ## modulus
 
 ### parameters
-- platformName
 - projectName
 - (OPTIONAL) settingsFilePath
 
 ## ios
 
 ### parameters
-- platformName
 - projectName
   (used to open your XXX.xcodeproj folder)
 - server
@@ -75,7 +73,6 @@ An example of meteor-multi-deploy.json
 ## android
 
 ### parameters
-- platformName
 - projectName
   (used to name your apk)
 - server
