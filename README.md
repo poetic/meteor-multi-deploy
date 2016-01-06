@@ -65,18 +65,22 @@ An example of meteor-multi-deploy.json
 ## ios
 
 ### parameters
+- platformName
+- projectName
+  used to open your XXX.xcodeproj folder
+- server
+- (OPTIONAL) settingsFilePath
 
 ## android
-- projectName
-- server
-- (OPTIONAL) mobileSettingsFilePath
 
 ### parameters
 - platformName
 - projectName
+  used to name your apk
 - server
 - storepass
 - keystoreFilePath
+  About keystore file http://developer.android.com/tools/publishing/app-signing.html
 - (OPTIONAL) apkOutputPath (DEFAULT: .meteor-builds/${projectName}.apk)
 - (OPTIONAL) mobileSettingsFilePath
 

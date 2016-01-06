@@ -28,11 +28,14 @@ try {
 var deploy = require('../lib/deploy.js')
 
 // enable user to specify a platform name when running mmd
-var platform = process.argv[2]
+var platforms = deployDescription.platforms
 
-if (platform) {
-  platform.ignore = false
-  deploy(platform)
-} else {
-  deployDescription.platforms.forEach(deploy)
+var platformName = process.argv[2]
+
+if (platformName) {
+  platforms = platforms.filter(function (platform) {
+    return platform.platformName = platformName
+  })
 }
+
+platforms.forEach(deploy)
