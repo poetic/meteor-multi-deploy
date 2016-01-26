@@ -15,6 +15,7 @@ you can use ***meteor-multi-deploy(mmd)*** to deploy to multiple platforms.
 ```
 mmd # deploy to all platforms specified in the json file
 mmd android # only deploy to android
+mmd android staging # only deploy to android for staging environment
 ```
 
 An example of meteor-multi-deploy.json
@@ -24,12 +25,14 @@ An example of meteor-multi-deploy.json
     {
       "platformName":     "modulus",
       "projectName":      "my-production-project",
-      "settingsFilePath": "settings.production.json"
+      "settingsFilePath": "settings.production.json",
+      "environment":      "production"
     },
     {
       "platformName":     "modulus",
       "projectName":      "my-staging-project",
       "settingsFilePath": "settings.stating.json",
+      "environment":      "staging",
       "ignore": true
     },
     {

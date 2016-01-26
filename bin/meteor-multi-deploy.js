@@ -31,10 +31,12 @@ var deploy = require('../lib/deploy.js')
 var platforms = deployDescription.platforms
 
 var platformName = process.argv[2]
+var environment  = process.argv[3]
 
 if (platformName) {
   platforms = platforms.filter(function (platform) {
-    return platform.platformName === platformName
+    return platform.platformName === platformName &&
+      (!environment || platform.environment === environment)
   })
 }
 
