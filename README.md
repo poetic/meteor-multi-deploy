@@ -26,14 +26,20 @@ An example of meteor-multi-deploy.json
       "platformName":     "modulus",
       "projectName":      "my-production-project",
       "settingsFilePath": "settings.production.json",
-      "environment":      "production"
+      "environment":      "production",
+      "mongodump":        {
+        "hostname":     "apollo.modulusmongo.net",
+        "username":     "root",
+        "password":     "D7asdfed",
+        "databaseName": "mfa8dfee",
+        "dbOutputPath": "dump/production/$(date +%s)"
+      }
     },
     {
       "platformName":     "modulus",
       "projectName":      "my-staging-project",
       "settingsFilePath": "settings.stating.json",
       "environment":      "staging",
-      "ignore": true
     },
     {
       "platformName":           "android",
@@ -64,6 +70,8 @@ An example of meteor-multi-deploy.json
 ### parameters
 - projectName
 - (OPTIONAL) settingsFilePath
+- (OPTIONAL) mongodump
+  (used to create a mongodump file)
 
 ## ios
 
