@@ -24,32 +24,33 @@ An example of meteor-multi-deploy.json
   "platforms": [
     {
       "platformName":     "modulus",
-      "projectName":      "my-production-project",
-      "settingsFilePath": "settings.production.json",
       "environment":      "production",
-      "mongodump":        {
-        "hostname":     "apollo.modulusmongo.net",
-        "username":     "root",
-        "password":     "D7asdfed",
-        "databaseName": "mfa8dfee",
-        "dbOutputPath": "dump/production/$(date +%s)"
-      }
+      "projectName":      "hoopla-production",
+      "settingsFilePath": "settings-production.json"
     },
     {
       "platformName":     "modulus",
-      "projectName":      "my-staging-project",
-      "settingsFilePath": "settings.stating.json",
       "environment":      "staging",
+      "projectName":      "hoopla-staging",
+      "settingsFilePath": "settings-staging.json"
     },
     {
       "platformName":           "android",
-      "projectName":            "my-project",
-      "server":                 "my.production.server",
-      "storepass":              "storepass",
+      "environment":            "production",
+      "projectName":            "hoopla.keystore",
+      "server":                 "app.hoopla.social",
+      "storepass":              "hoopla",
+      "keystoreFilePath":       ".keystore",
       "mobileSettingsFilePath": "settings-production.json",
-      "apkOutputPath":          "~/Downloads/my-project.apk",
-      "keystoreFilePath":       ".keystore"
-    }
+      "apkOutputPath":          "~/Downloads/hoopla.apk"
+    },
+    {
+      "platformName":           "ios",
+      "environment":            "production",
+      "projectName":            "hoopla",
+      "server":                 "app.hoopla.social",
+      "mobileSettingsFilePath": "settings-production.json"
+    },
   ]
 }
 ```
