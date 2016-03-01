@@ -96,3 +96,8 @@ An example of meteor-multi-deploy.json
 
 ### extra steps
 Publish your apk file at https://play.google.com/apps/publish
+
+# TODO
+- add a walk through like what npm does
+- change mobile settings to settings, unify the api
+- for development, enable ios device
