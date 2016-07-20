@@ -23,6 +23,20 @@ An example of meteor-multi-deploy.json
 {
   "platforms": [
     {
+      "platformName": "heroku",
+      "projectName": "meteor-multi-deploy-setup-production",
+      "environment": "production",
+      "settingsFilePath": "settings-production.json"
+    },
+    {
+      "platformName": "heroku",
+      "projectName": "meteor-multi-deploy-setup-staging",
+      "environment": "staging",
+      "branchToPush": "staging",
+      "confirmPushToMaster": "true",
+      "settingsFilePath": "settings-staging.json"
+    },
+    {
       "platformName":     "modulus",
       "environment":      "production",
       "projectName":      "hoopla-production",
@@ -65,6 +79,16 @@ An example of meteor-multi-deploy.json
     (You can ignore the current platform when trying to deploy)
 
 # Platforms<a name="platforms"></a>
+
+## heroku
+
+### parameters
+- projectName
+- (OPTIONAL) settingsFilePath
+
+#### If not pushing to production and the master branch, please confirm which branch to push
+- branchToPush
+- confirmPushToMaster
 
 ## modulus
 
