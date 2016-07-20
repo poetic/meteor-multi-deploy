@@ -3,7 +3,8 @@
   "description": "Automate the deployment of a meteor project to multiple platforms. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no test specified\""
+    "test": "echo \"no test specified\"",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -35,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/poetic/meteor-multi-deploy/issues"
   },
-  "homepage": "https://github.com/poetic/meteor-multi-deploy"
+  "homepage": "https://github.com/poetic/meteor-multi-deploy",
+  "devDependencies": {
+    "semantic-release": "^4.3.5"
+  }
 }

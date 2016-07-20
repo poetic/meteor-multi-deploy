@@ -122,6 +122,8 @@ An example of meteor-multi-deploy.json
 Publish your apk file at https://play.google.com/apps/publish
 
 # TODO
+- mmd init project-name (create default meteor-multi-deploy file)
+- after the above, merge mmd into stanza
 - add a walk through like what npm does
 - change mobile settings to settings, unify the api
 - for development, enable ios device
