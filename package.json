@@ -1,13 +1,16 @@
 {
   "name": "meteor-multi-deploy",
-  "version": "1.0.13",
   "description": "Automate the deployment of a meteor project to multiple platforms. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no test specified\""
+  },
+  "engines": {
+    "node": ">=6.0.0"
   },
   "bin": {
-    "meteor-multi-deploy": "bin/meteor-multi-deploy.js"
+    "meteor-multi-deploy": "bin/meteor-multi-deploy.js",
+    "mmd": "bin/meteor-multi-deploy.js"
   },
   "dependencies": {
     "cli": "^0.11.1",

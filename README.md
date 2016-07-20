@@ -1,17 +1,17 @@
 # The Goal
 Automate the deployment of a meteor project to multiple platforms.
 
+# Requirements
+node >= 6.0.0
+
 # Note
 This is package is only tested on Mac.
 
 # Get Started
 ```
 npm install -g meteor-multi-deploy
-alias mmd="meteor-multi-deploy"
 ```
 
-After creating a meteor-multi-deploy.json under your meteor directory,
-you can use ***meteor-multi-deploy(mmd)*** to deploy to multiple platforms.
 ```
 mmd # deploy to all platforms specified in the json file
 mmd android # only deploy to android
@@ -64,7 +64,7 @@ An example of meteor-multi-deploy.json
       "projectName":            "hoopla",
       "server":                 "app.hoopla.social",
       "mobileSettingsFilePath": "settings-production.json"
-    },
+    }
   ]
 }
 ```
