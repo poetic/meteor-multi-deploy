@@ -24,45 +24,43 @@ An example of meteor-multi-deploy.json
   "platforms": [
     {
       "platformName": "heroku",
-      "projectName": "meteor-multi-deploy-setup-production",
+      "projectName": "app-production",
       "environment": "production",
       "settingsFilePath": "settings-production.json"
     },
     {
       "platformName": "heroku",
-      "projectName": "meteor-multi-deploy-setup-staging",
+      "projectName": "app-staging",
       "environment": "staging",
-      "branchToPush": "staging",
-      "confirmPushToMaster": "true",
       "settingsFilePath": "settings-staging.json"
     },
     {
       "platformName":     "modulus",
       "environment":      "production",
-      "projectName":      "hoopla-production",
+      "projectName":      "app-production",
       "settingsFilePath": "settings-production.json"
     },
     {
       "platformName":     "modulus",
       "environment":      "staging",
-      "projectName":      "hoopla-staging",
+      "projectName":      "app-staging",
       "settingsFilePath": "settings-staging.json"
     },
     {
       "platformName":           "android",
       "environment":            "production",
-      "projectName":            "hoopla.keystore",
-      "server":                 "app.hoopla.social",
-      "storepass":              "hoopla",
+      "projectName":            "app.keystore",
+      "server":                 "app.app.social",
+      "storepass":              "app",
       "keystoreFilePath":       ".keystore",
       "mobileSettingsFilePath": "settings-production.json",
-      "apkOutputPath":          "~/Downloads/hoopla.apk"
+      "apkOutputPath":          "~/Downloads/app.apk"
     },
     {
       "platformName":           "ios",
       "environment":            "production",
-      "projectName":            "hoopla",
-      "server":                 "app.hoopla.social",
+      "projectName":            "app",
+      "server":                 "app.app.social",
       "mobileSettingsFilePath": "settings-production.json"
     }
   ]
@@ -85,10 +83,6 @@ An example of meteor-multi-deploy.json
 ### parameters
 - projectName
 - (OPTIONAL) settingsFilePath
-
-#### If not pushing to production and the master branch, please confirm which branch to push
-- branchToPush
-- confirmPushToMaster
 
 ## modulus
 
