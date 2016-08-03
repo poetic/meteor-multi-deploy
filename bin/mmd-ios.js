@@ -15,7 +15,7 @@ program
     const { name, settingsPath, server } = parseOptions('ios', environment);
     const serverOption = formatOption('--server', server);
     const settingsOption = formatOption('--mobile-settings', settingsPath);
-    if (!test('-f', settingsPath)) {
+    if (settingsPath && !test('-f', settingsPath)) {
       throw new Error(`${settingsPath} does not exist.`);
     }
     exec(`meteor build ../output ${serverOption} ${settingsOption}`);
