@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"no test specified\"",
+    "lint": "eslint --ext .js .",
+    "fix": "eslint --ext .js . --fix",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "engines": {
@@ -38,6 +40,7 @@
   },
   "homepage": "https://github.com/poetic/meteor-multi-deploy",
   "devDependencies": {
+    "eslint-config-poetic": "^1.0.2",
     "semantic-release": "^4.3.5"
   }
 }
