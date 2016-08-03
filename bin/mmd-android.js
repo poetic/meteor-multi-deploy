@@ -32,7 +32,7 @@ program
 
     // sign
     const releaseApkPath = '../output/android/project/build/outputs/apk/' +
-      'android-armv7-release-unsigned.apk;';
+      'android-armv7-release-unsigned.apk';
     const jarsignerOptions = [
       '-verbose',
       '-sigalg SHA1withRSA',
