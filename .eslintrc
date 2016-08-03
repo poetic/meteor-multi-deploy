@@ -1,3 +1,6 @@
 {
-  "extends": "poetic"
+  "extends": "poetic",
+  "rules": {
+    "no-console": 0
+  }
 }
