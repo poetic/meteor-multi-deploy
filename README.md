@@ -23,7 +23,7 @@ Let's call the json object `config`.
 When you run `mmd <platform> <environment>`, mmd will combine default config and
 specific config for the platform and environment. The priority is in this order:
 
-- config.<platform>.<environment>
-- config.<platform>.default
-- config.default.<environment>
+- config.\<platform\>.\<environment\>
+- config.\<platform\>.default
+- config.default.\<environment\>
 - config.default.default
