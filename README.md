@@ -5,8 +5,8 @@
 
 [travis-image]:            https://travis-ci.org/poetic/meteor-multi-deploy.svg
 [travis-url]:              https://travis-ci.org/poetic/meteor-multi-deploy
-[npm-image]:               https://img.shields.io/npm/v/poetic-meteor-multi-deploy.svg
-[npm-url]:                 https://npmjs.org/package/poetic-meteor-multi-deploy
+[npm-image]:               https://img.shields.io/npm/v/meteor-multi-deploy.svg
+[npm-url]:                 https://npmjs.org/package/meteor-multi-deploy
 [semantic-release-image]:  https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]:    https://github.com/semantic-release/semantic-release
 
