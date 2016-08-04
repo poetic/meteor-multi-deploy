@@ -12,8 +12,7 @@
     "node": ">=6.0.0"
   },
   "bin": {
-    "mmd": "bin/mmd.js",
-    "meteor-multi-deploy": "bin/mmd.js"
+    "mmd": "bin/mmd.js"
   },
   "dependencies": {
     "chalk": "^1.1.3",
