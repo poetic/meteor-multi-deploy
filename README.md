@@ -15,3 +15,15 @@ mmd heroku production
 
 mmd # print help info
 ```
+
+# meteor-multi-deploy.json
+After you run `mmd setup`, a meteor-multi-deploy.json file will be generated.
+Let's call the json object `config`.
+
+When you run `mmd <platform> <environment>`, mmd will combine default config and
+specific config for the platform and environment. The priority is in this order:
+
+- config.<platform>.<environment>
+- config.<platform>.default
+- config.default.<environment>
+- config.default.default
