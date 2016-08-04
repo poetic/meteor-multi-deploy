@@ -59,7 +59,7 @@ program
 
     // android
     // android-keystore
-    const keystoreExist = test('-f', path.resolve('keystore'));
+    const keystoreExist = test('-f', path.resolve('.keystore'));
     if (!keystoreExist) {
       const keystoreOptionsString = [
         '-genkey',
