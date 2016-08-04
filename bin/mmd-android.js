@@ -7,6 +7,24 @@ const formatOption = require('../lib/format-option');
 const fs = require('fs');
 const semver = require('semver');
 
+function getReleaseApkPath() {
+  const vBelow1_4 = '../output/android/project/build/outputs/apk/' +
+    'android-armv7-release-unsigned.apk';
+  if (test('-f', vBelow1_4)) {
+    return vBelow1_4;
+  }
+
+  const vAbove1_4 = '../output/android/release-unsigned.apk';
+  if (test('-f', vAbove1_4)) {
+    return vAbove1_4
+  }
+
+  throw new Error(
+    'Can not find apk file, ' +
+    'maybe meteor is updated and the apk location is changed.'
+  )
+}
+
 program
   .arguments('<environment>')
   .action((environment) => {
@@ -31,8 +49,7 @@ program
     exec(`meteor build ../output ${serverOption} ${settingsOption}`);
 
     // sign
-    const releaseApkPath = '../output/android/project/build/outputs/apk/' +
-      'android-armv7-release-unsigned.apk';
+    const releaseApkPath = getReleaseApkPath();
     const jarsignerOptions = [
       '-verbose',
       '-sigalg SHA1withRSA',
