@@ -6,12 +6,10 @@ const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
 
-program
-  .arguments('[name]')
-  .action((name) => {
-    const fileName = 'meteor-multi-deploy.json';
-    const filePath = path.resolve(fileName);
-    const fileContent = `\
+function generateConfigJson (name) {
+  const fileName = 'meteor-multi-deploy.json';
+  const filePath = path.resolve(fileName);
+  const fileContent = `\
 {
   "default": {
     "default": {
@@ -40,8 +38,15 @@ program
   }
 }
 `;
-    fs.writeFileSync(filePath, fileContent);
-    console.log(chalk.green(`${fileName} is generated for ${name}.`));
+  fs.writeFileSync(filePath, fileContent);
+  console.log(chalk.green(`${fileName} is generated for ${name}.`));
+}
+
+program
+  .arguments('[name]')
+  .action((name) => {
+    generateConfigJson(name);
+    // TODO: check if keystore exist and let the user change the store pass
   });
 
 program.on('--help', () => {
