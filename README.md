@@ -1,10 +1,22 @@
-# The Goal
+# meteor-multi-deploy
+[![travis][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+[![semantic-release][semantic-release-image]][semantic-release-url]
+
+[travis-image]:            https://travis-ci.org/poetic/meteor-multi-deploy.svg
+[travis-url]:              https://travis-ci.org/poetic/meteor-multi-deploy
+[npm-image]:               https://img.shields.io/npm/v/poetic-meteor-multi-deploy.svg
+[npm-url]:                 https://npmjs.org/package/poetic-meteor-multi-deploy
+[semantic-release-image]:  https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-release-url]:    https://github.com/semantic-release/semantic-release
+
+## The Goal
 Automate the deployment of a meteor project to multiple platforms.
 
-# Requirements
+## Requirements
 node >= 6.0.0
 
-# Get Started
+## Get Started
 ```
 npm install -g meteor-multi-deploy
 cd path/to/my-project
@@ -16,7 +28,7 @@ mmd heroku production
 mmd # print help info
 ```
 
-# meteor-multi-deploy.json
+## meteor-multi-deploy.json
 After you run `mmd setup`, a meteor-multi-deploy.json file will be generated.
 Let's call the json object `config`.
 
