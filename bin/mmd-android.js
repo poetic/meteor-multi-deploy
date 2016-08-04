@@ -8,21 +8,21 @@ const fs = require('fs');
 const semver = require('semver');
 
 function getReleaseApkPath() {
-  const vBelow1_4 = '../output/android/project/build/outputs/apk/' +
+  const belowOnePointFour = '../output/android/project/build/outputs/apk/' +
     'android-armv7-release-unsigned.apk';
-  if (test('-f', vBelow1_4)) {
-    return vBelow1_4;
+  if (test('-f', belowOnePointFour)) {
+    return belowOnePointFour;
   }
 
-  const vAbove1_4 = '../output/android/release-unsigned.apk';
-  if (test('-f', vAbove1_4)) {
-    return vAbove1_4
+  const aboveOnePointFour = '../output/android/release-unsigned.apk';
+  if (test('-f', aboveOnePointFour)) {
+    return aboveOnePointFour;
   }
 
   throw new Error(
     'Can not find apk file, ' +
     'maybe meteor is updated and the apk location is changed.'
-  )
+  );
 }
 
 program
