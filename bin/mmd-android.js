@@ -28,10 +28,6 @@ function getReleaseApkPath() {
 program
   .arguments('<environment>')
   .action((environment) => {
-    // remove previous build folder
-    rm('-rf', '../output/');
-
-    // build
     const {
       name,
       settingsPath,
@@ -41,6 +37,20 @@ program
       apkOutputPath,
     } = parseOptions('android', environment);
 
+    // for local development
+    if (environment === 'develop') {
+      const developOptionsString = [
+        formatOption('--settings', settingsPath),
+        formatOption('--mobile-server', server),
+      ].join('');
+      exec(`meteor run android-device ${developOptionsString}`);
+      return;
+    }
+
+    // remove previous build folder
+    rm('-rf', '../output/');
+
+    // build
     const serverOption = formatOption('--server', server);
     const settingsOption = formatOption('--mobile-settings', settingsPath);
     if (settingsPath && !test('-f', settingsPath)) {
