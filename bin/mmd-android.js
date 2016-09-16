@@ -19,10 +19,11 @@ function getReleaseApkPath() {
     return aboveOnePointFour;
   }
 
-  throw new Error(
-    'Can not find apk file, ' +
-    'maybe meteor is updated and the apk location is changed./n' +
-    'Also, check https://goo.gl/OXPYmX for known Meteor issues.'
+  throw new Error(`\
+    Problem: Can not find apk file.
+    Possible Reasons: 
+    1. Meteor bug for version (1.3.x) https://github.com/meteor/meteor/issues/6756.
+    2. Meteor is updated and the apk location is changed. Please update mmd if this happens. Thank you!`
   );
 }
 
