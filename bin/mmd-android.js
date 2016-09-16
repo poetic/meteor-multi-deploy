@@ -21,7 +21,8 @@ function getReleaseApkPath() {
 
   throw new Error(
     'Can not find apk file, ' +
-    'maybe meteor is updated and the apk location is changed.'
+    'maybe meteor is updated and the apk location is changed./n' +
+    'Also, check https://goo.gl/OXPYmX for known Meteor issues.'
   );
 }
 
